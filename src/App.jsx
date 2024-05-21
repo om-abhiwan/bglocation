@@ -56,6 +56,17 @@ const App = () => {
     }
   }, []);
 
+
+
+
+  // clearng the data 
+  const clearData = () =>{
+    localStorage.removeItem("locations")
+    window.location.reload();
+  }
+
+
+
   return (
     <div>
       <h1>PWA Geolocation Example</h1>
@@ -73,6 +84,10 @@ const App = () => {
           </ul>
         </div>
       )}
+
+      <div>
+        <buton className="clearButton" onClick={clearData} >Clear</buton>
+      </div>
     </div>
   );
 };
